@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Gourmix</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { border: 2px solid #d4af37; padding: 30px; border-radius: 20px; text-align: center; background: #111; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); width: 280px; }
+        h1 { color: #d4af37; letter-spacing: 2px; margin-bottom: 10px; }
+        #promo-code { font-size: 24px; font-weight: bold; margin: 20px 0; color: #fff; display: none; border: 1px dashed #d4af37; padding: 10px; }
+        button { background: #d4af37; color: #000; border: none; padding: 15px 25px; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>GOURMIX</h1>
+        <p>Votre offre exclusive vous attend...</p>
+        <div id="promo-code"></div>
+        <button id="main-btn" onclick="reveal()">RÉVÉLER MON CODE</button>
+    </div>
+
+    <script>
+        function reveal() {
+            const codes = ["GOURMIX10", "MIX2025", "CHEF-GIFT", "PREMIUM15"];
+            const choice = codes[Math.floor(Math.random() * codes.length)];
+            document.getElementById('promo-code').innerText = choice;
+            document.getElementById('promo-code').style.display = 'block';
+            document.getElementById('main-btn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
